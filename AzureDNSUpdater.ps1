@@ -4,8 +4,9 @@
 #region Setup with Creds
     $tenantID = ""
     $subscriptionID = ""
-    $PrinPW = ""
-    $User = ""
+    # Service Principle User/PW
+        $PrinPW = ""
+        $User = ""
     $PWord = ConvertTo-SecureString -String $PrinPW -AsPlainText -Force
     $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord
 #endregion
