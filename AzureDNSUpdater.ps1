@@ -23,7 +23,7 @@
 
 #region Execute DNS Record Change
     echo "Attempting to update DNS Record."
-    $rs = Get-AzDnsRecordSet -name 'dcssrs' -RecordType A -ZoneName "u64.co.nz" -ResourceGroupName "u64-dns"
+    $rs = Get-AzDnsRecordSet -name 'nameofrecord' -RecordType A -ZoneName "yourdnszone.com" -ResourceGroupName "yourresourcegroup"
     $rs.Records[0].Ipv4Address = $NewDNSIP
     Set-AzDnsRecordSet -RecordSet $rs
     echo "Done."
